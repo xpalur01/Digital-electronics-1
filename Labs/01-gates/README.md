@@ -24,3 +24,4 @@
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |  
 ![GitHub Logo](ukol_1+2.png)
+hej
