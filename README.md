@@ -24,4 +24,4 @@
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |  
 
-| :-: | :-: | :-: | :-: |
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Half-adder.svg/330px-Half-adder.svg.png)
