@@ -1,0 +1,265 @@
+MDF Database:  version 1.0
+MDF_INFO | top | XC2C256-6-TQ144
+MACROCELL | 11 | 11 | LD0_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | SW0_CPLD
+INPUTP | 1 | 206
+EQ | 1 | 
+   LD0_CPLD = SW0_CPLD;	// (1 pt, 1 inp)
+
+MACROCELL | 8 | 13 | LD15_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 7 | SW3_CPLD  | SW11_CPLD  | SW2_CPLD  | SW10_CPLD  | s_result<3>  | s_result<2>  | N_PZ_29
+INPUTMC | 3 | 0 | 15 | 0 | 14 | 0 | 8
+INPUTP | 4 | 207 | 4 | 208 | 5
+EQ | 3 | 
+   !LD15_CPLD = !SW3_CPLD & !SW11_CPLD
+	# !SW2_CPLD & !SW10_CPLD & s_result<3>
+	# s_result<3> & s_result<2> & !N_PZ_29;	// (3 pt, 7 inp)
+
+MACROCELL | 0 | 15 | s_result<3>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 8 | 13 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12
+INPUTS | 6 | SW3_CPLD  | SW11_CPLD  | SW2_CPLD  | s_result<2>  | SW10_CPLD  | N_PZ_29
+INPUTMC | 2 | 0 | 14 | 0 | 8
+INPUTP | 4 | 207 | 4 | 208 | 5
+EQ | 8 | 
+   s_result<3> = SW3_CPLD & SW11_CPLD & SW2_CPLD & !s_result<2>
+	# SW3_CPLD & SW11_CPLD & SW10_CPLD & N_PZ_29
+	# SW3_CPLD & !SW11_CPLD & !SW2_CPLD & !SW10_CPLD
+	# SW3_CPLD & !SW11_CPLD & s_result<2> & !N_PZ_29
+	# !SW3_CPLD & SW11_CPLD & !SW2_CPLD & !SW10_CPLD
+	# !SW3_CPLD & SW11_CPLD & s_result<2> & !N_PZ_29
+	# !SW3_CPLD & !SW11_CPLD & SW2_CPLD & !s_result<2>
+	# !SW3_CPLD & !SW11_CPLD & SW10_CPLD & N_PZ_29;	// (8 pt, 6 inp)
+
+MACROCELL | 0 | 14 | s_result<2>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 10 | 0 | 15 | 8 | 13 | 0 | 10 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12
+INPUTS | 3 | SW2_CPLD  | SW10_CPLD  | N_PZ_29
+INPUTMC | 1 | 0 | 8
+INPUTP | 2 | 208 | 5
+EQ | 3 | 
+   s_result<2> = SW2_CPLD
+	$ SW10_CPLD & !N_PZ_29
+	# !SW10_CPLD & N_PZ_29;	// (3 pt, 3 inp)
+
+MACROCELL | 0 | 8 | N_PZ_29_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 0 | 14 | 0 | 15 | 8 | 13
+INPUTS | 4 | N_PZ_20  | SW9_CPLD  | SW0_CPLD  | SW8_CPLD
+INPUTMC | 1 | 0 | 6
+INPUTP | 3 | 1 | 206 | 3
+EQ | 2 | 
+   N_PZ_29 = !N_PZ_20 & SW9_CPLD
+	# SW0_CPLD & SW8_CPLD & N_PZ_20;	// (2 pt, 4 inp)
+
+MACROCELL | 0 | 6 | N_PZ_20_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 10 | 0 | 8 | 0 | 9 | 0 | 10 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12
+INPUTS | 2 | SW1_CPLD  | SW9_CPLD
+INPUTP | 2 | 204 | 1
+EQ | 2 | 
+   N_PZ_20 = SW1_CPLD & !SW9_CPLD
+	# !SW1_CPLD & SW9_CPLD;	// (2 pt, 2 inp)
+
+MACROCELL | 11 | 12 | LD1_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | SW1_CPLD
+INPUTP | 1 | 204
+EQ | 1 | 
+   LD1_CPLD = SW1_CPLD;	// (1 pt, 1 inp)
+
+MACROCELL | 11 | 1 | LD2_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | SW2_CPLD
+INPUTP | 1 | 208
+EQ | 1 | 
+   LD2_CPLD = SW2_CPLD;	// (1 pt, 1 inp)
+
+MACROCELL | 11 | 10 | LD3_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | SW3_CPLD
+INPUTP | 1 | 207
+EQ | 1 | 
+   LD3_CPLD = SW3_CPLD;	// (1 pt, 1 inp)
+
+MACROCELL | 9 | 13 | LD4_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | SW8_CPLD
+INPUTP | 1 | 3
+EQ | 1 | 
+   LD4_CPLD = SW8_CPLD;	// (1 pt, 1 inp)
+
+MACROCELL | 9 | 15 | LD5_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | SW9_CPLD
+INPUTP | 1 | 1
+EQ | 1 | 
+   LD5_CPLD = SW9_CPLD;	// (1 pt, 1 inp)
+
+MACROCELL | 9 | 5 | LD6_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | SW10_CPLD
+INPUTP | 1 | 5
+EQ | 1 | 
+   LD6_CPLD = SW10_CPLD;	// (1 pt, 1 inp)
+
+MACROCELL | 9 | 11 | LD7_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | SW11_CPLD
+INPUTP | 1 | 4
+EQ | 1 | 
+   LD7_CPLD = SW11_CPLD;	// (1 pt, 1 inp)
+
+MACROCELL | 10 | 12 | disp_dig_o<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   disp_dig_o<0> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 10 | 13 | disp_dig_o<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !disp_dig_o<1> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 10 | 14 | disp_dig_o<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !disp_dig_o<2> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 10 | 15 | disp_dig_o<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !disp_dig_o<3> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 13 | 15 | disp_seg_o<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 6 | s_result<3>  | s_result<2>  | N_PZ_32  | N_PZ_20  | N_PZ_41  | SW8_CPLD
+INPUTMC | 5 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 6 | 0 | 7
+INPUTP | 1 | 3
+EQ | 6 | 
+   disp_seg_o<0> = s_result<3> & s_result<2> & N_PZ_32
+	# !s_result<3> & !s_result<2> & N_PZ_32
+	# !s_result<3> & s_result<2> & N_PZ_20 & !N_PZ_41
+	# !s_result<3> & !s_result<2> & !SW8_CPLD & !N_PZ_20
+	# !s_result<3> & !s_result<2> & SW8_CPLD & N_PZ_20 & 
+	N_PZ_41;	// (5 pt, 6 inp)
+
+MACROCELL | 0 | 10 | N_PZ_32_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 15 | 15 | 12
+INPUTS | 4 | s_result<2>  | N_PZ_41  | N_PZ_43  | N_PZ_20
+INPUTMC | 4 | 0 | 14 | 0 | 7 | 0 | 9 | 0 | 6
+EQ | 2 | 
+   N_PZ_32 = s_result<2> & N_PZ_41 & !N_PZ_43
+	# !s_result<2> & !N_PZ_20 & !N_PZ_41;	// (2 pt, 4 inp)
+
+MACROCELL | 0 | 7 | N_PZ_41_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 0 | 10 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12
+INPUTS | 2 | SW0_CPLD  | SW8_CPLD
+INPUTP | 2 | 206 | 3
+EQ | 2 | 
+   N_PZ_41 = SW0_CPLD & SW8_CPLD
+	# !SW0_CPLD & !SW8_CPLD;	// (2 pt, 2 inp)
+
+MACROCELL | 0 | 9 | N_PZ_43_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 0 | 10 | 15 | 14 | 15 | 10 | 15 | 4 | 15 | 15
+INPUTS | 3 | SW0_CPLD  | SW8_CPLD  | N_PZ_20
+INPUTMC | 1 | 0 | 6
+INPUTP | 2 | 206 | 3
+EQ | 2 | 
+   N_PZ_43 = SW0_CPLD & SW8_CPLD & !N_PZ_20
+	# !SW0_CPLD & !SW8_CPLD & N_PZ_20;	// (2 pt, 3 inp)
+
+MACROCELL | 15 | 14 | disp_seg_o<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 6 | s_result<3>  | s_result<2>  | N_PZ_41  | N_PZ_43  | N_PZ_20  | N_PZ_32
+INPUTMC | 6 | 0 | 15 | 0 | 14 | 0 | 7 | 0 | 9 | 0 | 6 | 0 | 10
+EQ | 5 | 
+   disp_seg_o<1> = !s_result<3> & !s_result<2> & !N_PZ_41
+	# !s_result<3> & !s_result<2> & N_PZ_43
+	# !s_result<3> & N_PZ_20 & !N_PZ_41
+	# s_result<3> & !N_PZ_20 & !N_PZ_32 & !N_PZ_41 & 
+	!N_PZ_43;	// (4 pt, 6 inp)
+
+MACROCELL | 15 | 11 | disp_seg_o<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | s_result<3>  | s_result<2>  | N_PZ_32  | N_PZ_41  | N_PZ_20
+INPUTMC | 5 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 7 | 0 | 6
+EQ | 3 | 
+   !disp_seg_o<2> = s_result<3> & s_result<2>
+	# !N_PZ_32 & N_PZ_41
+	# s_result<3> & N_PZ_20 & !N_PZ_41;	// (3 pt, 5 inp)
+
+MACROCELL | 15 | 10 | disp_seg_o<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 6 | s_result<3>  | N_PZ_32  | s_result<2>  | N_PZ_43  | N_PZ_20  | N_PZ_41
+INPUTMC | 6 | 0 | 15 | 0 | 10 | 0 | 14 | 0 | 9 | 0 | 6 | 0 | 7
+EQ | 3 | 
+   disp_seg_o<3> = !s_result<3> & N_PZ_32
+	# s_result<3> & !s_result<2> & N_PZ_43
+	# s_result<2> & N_PZ_20 & !N_PZ_41;	// (3 pt, 6 inp)
+
+MACROCELL | 15 | 4 | disp_seg_o<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | s_result<3>  | s_result<2>  | N_PZ_20  | N_PZ_41  | N_PZ_43
+INPUTMC | 5 | 0 | 15 | 0 | 14 | 0 | 6 | 0 | 7 | 0 | 9
+EQ | 3 | 
+   disp_seg_o<4> = s_result<3> & s_result<2> & N_PZ_20
+	# s_result<3> & s_result<2> & N_PZ_41
+	# !s_result<3> & !s_result<2> & N_PZ_43;	// (3 pt, 5 inp)
+
+MACROCELL | 15 | 15 | disp_seg_o<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 6 | s_result<3>  | s_result<2>  | N_PZ_32  | N_PZ_43  | N_PZ_20  | N_PZ_41
+INPUTMC | 6 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 6 | 0 | 7
+EQ | 5 | 
+   disp_seg_o<5> = s_result<3> & s_result<2> & N_PZ_32
+	# s_result<3> & s_result<2> & N_PZ_43
+	# s_result<3> & N_PZ_20 & !N_PZ_41
+	# !s_result<3> & s_result<2> & !N_PZ_20 & !N_PZ_32
+	# s_result<2> & N_PZ_20 & !N_PZ_32 & N_PZ_41;	// (5 pt, 6 inp)
+
+MACROCELL | 15 | 12 | disp_seg_o<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | s_result<3>  | N_PZ_32  | s_result<2>  | N_PZ_20  | N_PZ_41
+INPUTMC | 5 | 0 | 15 | 0 | 10 | 0 | 14 | 0 | 6 | 0 | 7
+EQ | 3 | 
+   disp_seg_o<6> = !s_result<3> & N_PZ_32
+	# s_result<3> & s_result<2> & !N_PZ_20 & !N_PZ_41
+	# s_result<3> & !s_result<2> & N_PZ_20 & !N_PZ_41;	// (3 pt, 5 inp)
+
+PIN | SW0_CPLD | 64 | 16 | LVCMOS18 | 206 | 4 | 11 | 11 | 0 | 8 | 0 | 7 | 0 | 9
+PIN | SW3_CPLD | 64 | 16 | LVCMOS18 | 207 | 3 | 0 | 15 | 8 | 13 | 11 | 10
+PIN | SW11_CPLD | 64 | 16 | LVCMOS18 | 4 | 3 | 0 | 15 | 8 | 13 | 9 | 11
+PIN | SW2_CPLD | 64 | 16 | LVCMOS18 | 208 | 4 | 0 | 14 | 0 | 15 | 8 | 13 | 11 | 1
+PIN | SW10_CPLD | 64 | 16 | LVCMOS18 | 5 | 4 | 0 | 14 | 0 | 15 | 8 | 13 | 9 | 5
+PIN | SW8_CPLD | 64 | 16 | LVCMOS18 | 3 | 5 | 0 | 8 | 9 | 13 | 0 | 7 | 0 | 9 | 13 | 15
+PIN | SW1_CPLD | 64 | 16 | LVCMOS18 | 204 | 2 | 0 | 6 | 11 | 12
+PIN | SW9_CPLD | 64 | 16 | LVCMOS18 | 1 | 3 | 0 | 6 | 0 | 8 | 9 | 15
+PIN | LD0_CPLD | 536871040 | 0 | LVCMOS18 | 145
+PIN | LD15_CPLD | 536871040 | 0 | LVCMOS18 | 177
+PIN | LD1_CPLD | 536871040 | 0 | LVCMOS18 | 144
+PIN | LD2_CPLD | 536871040 | 0 | LVCMOS18 | 152
+PIN | LD3_CPLD | 536871040 | 0 | LVCMOS18 | 146
+PIN | LD4_CPLD | 536871040 | 0 | LVCMOS18 | 156
+PIN | LD5_CPLD | 536871040 | 0 | LVCMOS18 | 154
+PIN | LD6_CPLD | 536871040 | 0 | LVCMOS18 | 160
+PIN | LD7_CPLD | 536871040 | 0 | LVCMOS18 | 158
+PIN | disp_dig_o<0> | 536871040 | 0 | LVCMOS18 | 192
+PIN | disp_dig_o<1> | 536871040 | 0 | LVCMOS18 | 194
+PIN | disp_dig_o<2> | 536871040 | 0 | LVCMOS18 | 195
+PIN | disp_dig_o<3> | 536871040 | 0 | LVCMOS18 | 196
+PIN | disp_seg_o<0> | 536871040 | 0 | LVCMOS18 | 95
+PIN | disp_seg_o<1> | 536871040 | 0 | LVCMOS18 | 82
+PIN | disp_seg_o<2> | 536871040 | 0 | LVCMOS18 | 87
+PIN | disp_seg_o<3> | 536871040 | 0 | LVCMOS18 | 88
+PIN | disp_seg_o<4> | 536871040 | 0 | LVCMOS18 | 90
+PIN | disp_seg_o<5> | 536871040 | 0 | LVCMOS18 | 81
+PIN | disp_seg_o<6> | 536871040 | 0 | LVCMOS18 | 86
