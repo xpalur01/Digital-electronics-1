@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-02-27T11:47:19</DateModified>
+  <DateModified>2020-02-27T12:02:04</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/04-adder/binary_adder/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/04-adder/binary_adder</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/04-adder/binary_adder/</ImplementationReportsDirectory>
   <DateInitialized>2020-02-27T11:47:18</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,0 +1,8 @@
+EN binary_cnt NULL /home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/05-counter_binary/binary_cnt.vhd sub00/vhpl02 1583404684
+EN hex_to_7seg NULL /home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/03-segment/hex_to_segment/hex_to_7seg.vhd sub00/vhpl04 1583404686
+AR binary_cnt behavioral /home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/05-counter_binary/binary_cnt.vhd sub00/vhpl03 1583404685
+EN top NULL /home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/05-counter_binary/top.vhd sub00/vhpl06 1583404688
+AR clock_enable behavioral /home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/05-counter_binary/clock_enable.vhd sub00/vhpl01 1583404683
+AR hex_to_7seg behavioral /home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/03-segment/hex_to_segment/hex_to_7seg.vhd sub00/vhpl05 1583404687
+EN clock_enable NULL /home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/05-counter_binary/clock_enable.vhd sub00/vhpl00 1583404682
+AR top behavioral /home/lab661/Documents/xpalurxkovan/Digital-electronics-1/Labs/05-counter_binary/top.vhd sub00/vhpl07 1583404689
