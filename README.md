@@ -1,3 +1,9 @@
+![](Images/simulace_03%2C14%20good.PNG)
+![](Images/simulace_03%2C14%20good.PNG) 
+
+
+
+
 |**A** | **NOT** |
 | :-: | :-: |
 | 0 | 1 |
