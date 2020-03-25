@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/HP/Downloads/Digital-electronics-1-master/Labs/08-traffic_lights/traffic_lights/traffic_lights_tb00_isim_beh.exe" -prj "C:/Users/HP/Downloads/Digital-electronics-1-master/Labs/08-traffic_lights/traffic_lights/traffic_lights_tb00_beh.prj" "work.traffic_lights_tb00" 
