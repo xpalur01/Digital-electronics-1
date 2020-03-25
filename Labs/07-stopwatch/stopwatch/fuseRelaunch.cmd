@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/HP/Downloads/Digital-electronics-1-master/Labs/07-stopwatch/stopwatch/stopwatch_tb00_isim_beh.exe" -prj "C:/Users/HP/Downloads/Digital-electronics-1-master/Labs/07-stopwatch/stopwatch/stopwatch_tb00_beh.prj" "work.stopwatch_tb00" 
