@@ -1,58 +1,22 @@
-|**A** | **NOT** |
-| :-: | :-: |
-| 0 | 1 |
-| 1 | 0 |
-
-| **A** | **B** | **AND** | **NAND** |
-| :-: | :-: | :-: | :-: |
-| 0 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 1 |
-| 1 | 0 | 0 | 1 |
-| 1 | 1 | 1 | 0 |
-
-| **A** | **B** | **OR** | **NOR** |
-| :-: | :-: | :-: | :-: |
-| 0 | 0 | 0 | 1 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 0 |
-
-| **A** | **B** | **XOR** | **XNOR** |
-| :-: | :-: | :-: | :-: |
-| 0 | 0 | 0 | 1 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 1 |  
+# Projekt ALU
+ALU neboli aritmetická a logická jednotka "Arithmetic & Logic Unit". Bez jeho implementace se v dnešní době neobejde žádný mikroprocesor. Je to fundament moderních počítačů, takový matematický mozek. 
 
 
 
+## Materials
 
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Half-adder.svg/330px-Half-adder.svg.png)
+The following hardware and software components are mainly used in the lab.
 
+### Hardware
 
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Full_Adder_Modules.svg/330px-Full_Adder_Modules.svg.png)
+* 
+* 
+* 
 
-1. A half adder has two inputs A and B and two outputs Carry and Sum. Comlpete the half adder truth table. Draw a logic diagram of both output functions.
+### Software
 
-    | **B** | **A** | **Carry** | **Sum** |
-    | :-: | :-: | :-: | :-: |
-    | 0 | 0 | 0 | 0 |
-    | 0 | 1 | 0 | 1 |
-    | 1 | 0 | 0 | 1 |
-    | 1 | 1 | 1 | 0 |
-    
-2. A full adder has three inputs and two outputs. The two inputs are A, B, and Carry input. The outputs are Carry output and Sum. Comlpete the full adder truth table and draw a logic diagram of both output functions.
+* ISE Design, ISE WebPACK Design Software, ver 14.7: [web page](https://www.xilinx.com/products/design-tools/ise-design-suite/ise-webpack.html), [installation](https://github.com/tomas-fryza/Digital-electronics-1/wiki)
+* Linux Mint 18.2 "Sonya" - Xfce (64-bit): [web page](https://linuxmint.com/download_all.php)
 
-
-    | **Cin** | **B** | **A** | **Cout** | **Sum** |
-    | :-: | :-: | :-: | :-: | :-: |
-    | 0 | 0 | 0 | 0 | 0 |
-    | 0 | 0 | 1 | 0 | 1 |
-    | 0 | 1 | 0 | 0 | 1 |
-    | 0 | 1 | 1 | 1 | 0 |
-    | 1 | 0 | 0 | 0 | 1 |
-    | 1 | 0 | 1 | 1 | 0 |
-    | 1 | 1 | 0 | 1 | 0 |
-    | 1 | 1 | 1 | 1 | 1 |
-
+<img src="Images/coolrunner_board.jpg" alt="CoolRunner-II board" height="300"/> <img src="Images/ise_synthesize_org.png" alt="ISE" height="300"/>
 
