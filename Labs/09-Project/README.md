@@ -14,6 +14,9 @@ Také vidíme jeden status výstup. Ten v různýc případech plní různé fun
 
 <img src="Images/csc1401-lecture03-computer-arithmetic-arithmetic-and-logic-unit-alu-5-638.jpg" alt="ALU_colored" height="300"/>
 
+Tady je vidět jiná obrazová intepretace, ale ve výsledku je to to samé. Vidíme vstup, výstup flagy neboli status výstup a control signal.
+
+<img src="Images/ALU.png" alt="ALU-sign" height="300"/>
 
 ### Hardware
 
