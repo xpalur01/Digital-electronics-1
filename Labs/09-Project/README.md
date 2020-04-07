@@ -23,7 +23,7 @@ Příklad ALU 74181, blokové schéma je uvedeno na obrázku, vykonává se dvě
 
 <img src="Images/ALU%2074181_2.png" alt="ALU-74181" height="300"/>
 
-### Hardware
+### Software
 
 * 
 * 
