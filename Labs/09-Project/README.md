@@ -16,7 +16,7 @@ Také vidíme jeden status výstup. Ten v různýc případech plní různé fun
 
 Tady je vidět jiná obrazová intepretace, ale ve výsledku je to to samé. Vidíme vstup, výstup flagy neboli status výstup a control signal.
 
-<img src="Images/ALU.png" alt="ALU-sign" height="300"/>
+<img src="Images/ALU%2074181.png" alt="ALU-šváb" height="300"/>
 
 ### Hardware
 
