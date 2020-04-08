@@ -36,6 +36,8 @@ Proto by jsem si první měl odpovědět na několik otázek:
 * Jaké dodatečné výstupy budu chtít?
     -mohu zobrazit hodnotu například na led na CPLD boardě. Carry out flag, zero flag, overflow flag nebo negative flag se dají aplikovat. Já se rozhodnul pro aplikování zero flag, carry out flag a negative flag.
 
+### Operations
+
 | Kód | Operace |     
 |:---:|:-------:|
 | 0000 |  A + B  |
@@ -57,3 +59,26 @@ Proto by jsem si první měl odpovědět na několik otázek:
 | 1101 |        B + 1       |
 | 1110 | Dvojkový doplněk A |
 | 1111 | Dvojkový doplněk B |
+
+
+### Vstupy
+
+|Name|Purpose|Size|
+|-|-|-|
+|__A__, __B__|operandy|4-bit|
+|__Y__|operace|4-bit|
+|__carry_in__|carry-in|1 bit|
+|__clk_i__|clock|1 bit|
+|__srst_n_i__|determines, whether it should be active or not|1 bit|
+|__en_i __|enable|1 bit|
+
+### Outputs
+
+|Name|Purpose|Size|
+|-|-|-|
+|__cout__|Carry-Flag|1 bit|
+|__sign__|Sign-Flag|1 bit|
+|__zero__|Zero-Flag|1 bit|
+|__F__|result|16-bit integer|
+
+
