@@ -69,7 +69,7 @@ Proto by jsem si první měl odpovědět na několik otázek:
 |__alu_select__|operace|4-bit|
 |__carry_in__|carry-in|1 bit|
 |__clk_i__|clock|1 bit|
-|__srst_n_i__|determines, whether it should be active or not|1 bit|
+|__srst_n_i__|reset button|1 bit|
 |__en_i__|enable|1 bit|
 
 ### Outputs
@@ -79,6 +79,6 @@ Proto by jsem si první měl odpovědět na několik otázek:
 |__carry_out__|Carry-Flag|1 bit|
 |__negf__|Sign-Flag|1 bit|
 |__zero__|Zero-Flag|1 bit|
-|__y__|result|4-bit|
+|__y__|výsledek|4-bit|
 
 
