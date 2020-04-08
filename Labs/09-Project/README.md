@@ -56,7 +56,7 @@ Proto by jsem si první měl odpovědět na několik otázek:
 | 1010 |       A AND B      |
 | 1011 |       A OR B       |
 | 1100 |       A XOR B      |
-| 1101 |        B + 1       |
+| 1101 |      A XNOR B      |
 | 1110 | Dvojkový doplněk A |
 | 1111 | Dvojkový doplněk B |
 
