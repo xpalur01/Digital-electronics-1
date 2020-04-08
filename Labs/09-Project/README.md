@@ -36,5 +36,24 @@ Proto by jsem si první měl odpovědět na několik otázek:
 * Jaké dodatečné výstupy budu chtít?
     -mohu zobrazit hodnotu například na led na CPLD boardě. Carry out flag, zero flag, overflow flag nebo negative flag se dají aplikovat. Já se rozhodnul pro aplikování zero flag, carry out flag a negative flag.
 
+| Kód | Operace |     
+|:---:|:-------:|
+| 0000 |  A + B  |
+| 0001 |  A - B  |
+| 0010 |  B - A  |
+| 0011 |  A + 1  |
+| 0100 |  A - 1  |
+| 0101 |  B + 1  |
+| 0110 |  B - 1  |
+| 0111 | A = B ? |
 
-
+|  Kód |       Operace      |
+|:----:|:------------------:|
+| 1000 |        NOT A       |
+| 1001 |        NOT B       |
+| 1010 |       A AND B      |
+| 1011 |       A OR B       |
+| 1100 |       A XOR B      |
+| 1101 |        B + 1       |
+| 1110 | Dvojkový doplněk A |
+| 1111 | Dvojkový doplněk B |
