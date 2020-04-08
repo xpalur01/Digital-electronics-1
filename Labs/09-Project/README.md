@@ -23,10 +23,14 @@ Příklad ALU 74181, blokové schéma je uvedeno na obrázku, vykonává se dvě
 
 <img src="Images/ALU%2074181_2.png" alt="ALU-74181" height="300"/>
 
-### Software
+### Teoreetická příprava
+Důležitou součástí vypracování projektu je teoretické usmyslení "co to vlastně udělam, jak to udělám...atd.". 
+Proto by jsem si první měl odpovědět na několik otázek:
 
-* 
-* 
-* 
+* Kolik bitů budou mít operandy A & B?
+* Kolik bitů bude mít výstup?
+* Kolik bitů bude mít kontrolní signál?
+* Jaké dodatečné výstupy budu chtít?
+
 
 
