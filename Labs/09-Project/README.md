@@ -103,3 +103,6 @@ Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku
 
 <img src="Images/scheamtic_alu.PNG" alt="ALUschematic" />
 <img src="Images/scheamtic_alu2.PNG" alt="ALUscheamtic2" />
+
+Tato jednotka se poskládala z jednotlivých sub segmentů, které každé plní svou funkci. Tak jak by se dala ALU poskládat z jednotlivých entit, kdy každá by plnila svou funkci. Tak je to vyřešené i v hardwaru. V procesoru se muže objevit například sekce tranzistorů, která plní jen funkci FULL ADDERU nebo jednoduché OR/AND. 
+
