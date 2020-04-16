@@ -100,3 +100,6 @@ Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces a
 Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
 
 Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku nedošlo k rozdílnostem ve funkčnosti. 
+
+<img src="Imagess/scheamtic_alu.PNG" alt="ALUschematic" />
+<img src="Images/scheamtic_alu2.PNG" alt="ALUscheamtic2" />
