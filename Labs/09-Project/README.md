@@ -84,10 +84,10 @@ Proto by jsem si první měl odpovědět na několik otázek:
 Kód jsem prvě dostal do funkčního stavu bez vstupního clocku. S testbenchem, který jsem provedl jsem byl spokojený. Jak můžeme vidět na obrázku, vše vypadá v pořádku, zobrazuje se dobře. 
 
 /obrázek test_AluWithoutClock
-<img src="Images/3%261.PNG" alt="ALU-74181" height="300"/>
-<img src="Images/3%2611.PNG" alt="ALU-74181" height="300"/>
-<img src="Images/15%264.PNG" alt="ALU-74181" height="300"/>
-<img src="Images/11%2611.PNG" alt="ALU-74181" height="300"/>
+<img src="Images/3%261.PNG" alt="ALU-3&1" />
+<img src="Images/3%2611.PNG" alt="ALU-3&11" />
+<img src="Images/15%264.PNG" alt="ALU-15&4" />
+<img src="Images/11%2611.PNG" alt="ALU-11&11" />
 
 Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces aby záležel na clocku. To se mi také povedlo.
 
