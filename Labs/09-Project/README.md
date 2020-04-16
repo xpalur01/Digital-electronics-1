@@ -101,5 +101,5 @@ Všechny operace jsem vyzkoušel pro více různých případů vstupních hodno
 
 Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku nedošlo k rozdílnostem ve funkčnosti. 
 
-<img src="Imagess/scheamtic_alu.PNG" alt="ALUschematic" />
+<img src="Images/scheamtic_alu.PNG" alt="ALUschematic" />
 <img src="Images/scheamtic_alu2.PNG" alt="ALUscheamtic2" />
