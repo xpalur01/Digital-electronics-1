@@ -23,7 +23,7 @@ Příklad ALU 74181, blokové schéma je uvedeno na obrázku, vykonává se dvě
 
 <img src="Images/ALU%2074181_2.png" alt="ALU-74181" height="300"/>
 
-### Teoreetická příprava
+### Teoretická příprava
 Důležitou součástí vypracování projektu je teoretické usmyslení "co to vlastně udělam, jak to udělám...atd.". 
 Proto by jsem si první měl odpovědět na několik otázek:
 
@@ -79,5 +79,16 @@ Proto by jsem si první měl odpovědět na několik otázek:
 |__negf__|Sign-Flag|1 bit|
 |__zero__|Zero-Flag|1 bit|
 |__y__|výsledek|4-bit|
+
+## Kód
+Kód jsem prvě dostal do funkčního stavu bez vstupního clocku. S testbenchem, který jsem provedl jsem byl spokojený. Jak můžeme vidět na obrázku, vše vypadá v pořádku, zobrazuje se dobře. 
+
+/obrázek test_AluWithoutClock
+
+Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces aby záležel na clocku. To se mi také povedlo.
+
+/příklady více clock ALU testbenchu
+
+Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
 
 
