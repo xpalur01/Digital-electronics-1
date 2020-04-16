@@ -92,6 +92,10 @@ Kód jsem prvě dostal do funkčního stavu bez vstupního clocku. S testbenchem
 Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces aby záležel na clocku. To se mi také povedlo.
 
 /příklady více clock ALU testbenchu
+<img src="Images/C3%261.PNG" alt="ALU-3&1" />
+<img src="Images/C3%2611.PNG" alt="ALU-3&11" />
+<img src="Images/C15%264.PNG" alt="ALU-15&4" />
+<img src="Images/C11%2611.PNG" alt="ALU-11&11" />
 
 Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
 
