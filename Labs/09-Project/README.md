@@ -67,7 +67,6 @@ Proto by jsem si první měl odpovědět na několik otázek:
 |-|-|-|
 |__A__, __B__|operandy|4-bit|
 |__alu_select__|operace|4-bit|
-|__carry_in__|carry-in|1 bit|
 |__clk_i__|clock|1 bit|
 |__srst_n_i__|reset button|1 bit|
 |__en_i__|enable|1 bit|
