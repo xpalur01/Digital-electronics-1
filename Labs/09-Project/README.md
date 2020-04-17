@@ -87,9 +87,9 @@ Proto by jsem si první měl odpovědět na několik otázek:
 | 1100 |       A XOR B      |
 | 1101 |      A XNOR B      |
 | 1110 | Dvojkový doplněk A |
-| 1111 |      **Zero**       |
+| 1111 |**B'MSB <=> B'LSB** |
 
-Tučným písmem jsem zvýraznil upravené operace. Jedná se o rotaci vpravo, rotaci vlevo, logický posun vlevo a zero, výstup bude nezávisle na vstupech nula
+Tučným písmem jsem zvýraznil upravené operace. Jedná se o rotaci vpravo, rotaci vlevo, logický posun vlevo a přehození nejvyššího a nejnižšího čtvrbytu
 
 ### Vstupy
 
