@@ -87,9 +87,9 @@ Proto by jsem si první měl odpovědět na několik otázek:
 | 1100 |       A XOR B      |
 | 1101 |      A XNOR B      |
 | 1110 | Dvojkový doplněk A |
-| 1111 |      **NOP**       |
+| 1111 |      **Zero**       |
 
-Tučným písmem jsem zvýraznil upravené operace. Jedná se o rotaci vpravo, rotaci vlevo, logický posun vlevo a NOP neboli no operation
+Tučným písmem jsem zvýraznil upravené operace. Jedná se o rotaci vpravo, rotaci vlevo, logický posun vlevo a zero, výstup bude nezávisle na vstupech nula
 
 ### Vstupy
 
