@@ -6,7 +6,7 @@ Aritmetické operace jsou např.: sčítání, odčítání, +1 = increment, -1 
 
 Logické operace jsou např.: NOT, AND, OR, XOR, clear operation, apod.
 
-## Obrázky
+## Obrázky & Schémata 
 <img src="Images/ALU.png" alt="ALU-sign" height="300"/>
 
 ###### Obrázek 1 Schéma Aritmetickologické jednotky (popis pod obrázkem)
@@ -87,34 +87,33 @@ Proto by jsem si první měl odpovědět na několik otázek:
 ## Kód & Testbench
 Kód jsem prvě dostal do funkčního stavu bez vstupního clocku. S testbenchem, který jsem provedl jsem byl spokojený. Jak můžeme vidět na obrázku, vše vypadá v pořádku, zobrazuje se dobře. 
 
+###### Obrázek 5 Součet bez clocku
 <img src="Images/3%261.PNG" alt="ALU-3&1" />
 
-###### Obrázek 5 Součet bez clocku
+###### Obrázek 6 Součet bez clocku
 <img src="Images/3%2611.PNG" alt="ALU-3&11" />
 
-###### Obrázek 6 Součet bez clocku
+###### Obrázek 7 Součet bez clocku
 <img src="Images/15%264.PNG" alt="ALU-15&4" />
 
-###### Obrázek 7 Součet bez clocku
+###### Obrázek 8 Součet bez clocku
 <img src="Images/11%2611.PNG" alt="ALU-11&11" />
 
-###### Obrázek 8 Součet bez clocku
+
 
 Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces aby záležel na clocku. To se mi také povedlo.
 
-
+###### Obrázek 9 Součet s implementovaným clockem
 <img src="Images/C3%261.PNG" alt="ALU-3&1" />
 
-###### Obrázek 9 Součet s implementovaným clockem
+###### Obrázek 10 Součet s implementovaným clockem
 <img src="Images/C3%2611.PNG" alt="ALU-3&11" />
 
-###### Obrázek 10 Součet s implementovaným clockem
+###### Obrázek 11 Součet s implementovaným clockem
 <img src="Images/C15%264.PNG" alt="ALU-15&4" />
 
-###### Obrázek 11 Součet s implementovaným clockem
-<img src="Images/C11%2611.PNG" alt="ALU-11&11" />
-
 ###### Obrázek 12 Součet s implementovaným clockem
+<img src="Images/C11%2611.PNG" alt="ALU-11&11" />
 
 Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
 
