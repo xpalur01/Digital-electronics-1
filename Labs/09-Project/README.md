@@ -169,24 +169,24 @@ Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Bar
 <img src="Images/top_alu1.PNG" alt="Top_ISE1"  />
 <img src="Images/top_alu2cut.PNG" alt="Top_ISE2"  />
 
-Jak můžeme vidět na obrázcích 17 a 18 celá obvod používá 12 přepínačů, jedno resetovací tlařítko, sinchronizační clock na vstupech. Na výstupech máme tři jedno bitové výstupy, které se na boardě připojí ke třem led které budou signalizovat různé stavy. Na 4 ciferný segmentový display bude přiveden vstup a, b (zleva) pak bude jedna nevyužitá cifra a nejvíce zprava se bude zobrazovat výstup z Alu jednotky. Tím pádem budeme vědět jaké vstupní hodnoty jsme zadali, jaká a je výstupní. 
-Teoreticky by se dal výstupní signál s_disp nasměrovat i na čtveřici led na rozšiřujícím "shieldu" pro lepší názornost logických operací..
+Jak můžeme vidět na obrázcích 17 a 18 celý obvod používá 12 přepínačů, jedno resetovací tlačítko, sinchronizační clock na vstupech. Na výstupech máme tři jedno bitové výstupy, které se na boardě připojí ke třem led, které budou signalizovat různé stavy. Na 4 ciferný segmentový display bude přiveden vstup a, b (zleva) pak bude jedna nevyužitá cifra, a nejvíce zprava se bude zobrazovat výstup z Alu jednotky y. Tím pádem budeme vědět jaké vstupní hodnoty jsme zadali a jaká je výstupní hodnota.
+Teoreticky by se dal výstupní signál s_disp nasměrovat i na čtveřici led na rozšiřujícím "shieldu" pro lepší názornost logických operací...
 
 ## Zdroje
 Prošel jsem si mnoho internetových zdrojů, hlavně ty, které popisují teorii funkčnosti Alu, protože jsem v první řadě potřeboval zjistit co a jak to funguje. Dále jsem nahlédl a různé zpracování kódu převážně v jazyce vhdl. Každý kód je něčím užitečný, díky tomu jsem si získal teoretický přehled, jak asi zpracovat toto téma a jak postupovat.
-https://www.youtube.com/watch?v=1I5ZMmrOfnA
-https://www.youtube.com/watch?v=UsK5KV1FPmA
-https://www.youtube.com/watch?v=r8xVQ3ThQK8
-https://www.youtube.com/watch?v=LAAdVA280fc
-https://www.youtube.com/watch?v=XbKB1Bu5bGg
-https://www.youtube.com/watch?v=RasZU3fr7hE
-https://www.youtube.com/watch?v=PKvJSXVfvps
-https://www.youtube.com/watch?v=pwIEqJan9mA
-https://portal.matematickabiologie.cz/index.php?pg=zaklady-informatiky-pro-biology--teoreticke-zaklady-informatiky--teorie-cisel--dvojkovy-doplnek
-https://cs.wikipedia.org/wiki/Dvojkov%C3%BD_dopln%C4%9Bk
-http://www.et-pocitacovesystemy.wz.cz/cislicova_technika/komb_log_obvody/aritm_log_jednotka/alu.html
-https://en.wikipedia.org/wiki/Arithmetic_logic_unit
-https://www.fpga4student.com/2017/06/vhdl-code-for-arithmetic-logic-unit-alu.html
-https://gist.github.com/pauljohanneskraft/b3e9d8f27b62200da705b258b63bdd60
-https://en.wikibooks.org/wiki/VHDL_for_FPGA_Design/4-Bit_ALU
-https://allaboutfpga.com/vhdl-code-for-4-bit-alu/
+* https://www.youtube.com/watch?v=1I5ZMmrOfnA
+* https://www.youtube.com/watch?v=UsK5KV1FPmA
+* https://www.youtube.com/watch?v=r8xVQ3ThQK8
+* https://www.youtube.com/watch?v=LAAdVA280fc
+* https://www.youtube.com/watch?v=XbKB1Bu5bGg
+* https://www.youtube.com/watch?v=RasZU3fr7hE
+* https://www.youtube.com/watch?v=PKvJSXVfvps
+* https://www.youtube.com/watch?v=pwIEqJan9mA
+* https://portal.matematickabiologie.cz/index.php?pg=zaklady-informatiky-pro-biology--teoreticke-zaklady-informatiky--teorie-cisel--dvojkovy-doplnek
+* https://cs.wikipedia.org/wiki/Dvojkov%C3%BD_dopln%C4%9Bk
+* http://www.et-pocitacovesystemy.wz.cz/cislicova_technika/komb_log_obvody/aritm_log_jednotka/alu.html
+* https://en.wikipedia.org/wiki/Arithmetic_logic_unit
+* https://www.fpga4student.com/2017/06/vhdl-code-for-arithmetic-logic-unit-alu.html
+* https://gist.github.com/pauljohanneskraft/b3e9d8f27b62200da705b258b63bdd60
+* https://en.wikibooks.org/wiki/VHDL_for_FPGA_Design/4-Bit_ALU
+* https://allaboutfpga.com/vhdl-code-for-4-bit-alu/
