@@ -63,7 +63,8 @@ Proto by jsem si první měl odpovědět na několik otázek:
 | 1101 |      A XNOR B      |
 | 1110 | Dvojkový doplněk A |
 | 1111 | Dvojkový doplněk B |
-/Pozn. platí pro obrázky v sekci Kód & Operace č. 5 až 12
+
+*Pozn. platí pro obrázky v sekci Kód & Operace č. 5 až 12*
 
 #### Po úpravě operací "Verze 2"
 | Kód | Operace |     
