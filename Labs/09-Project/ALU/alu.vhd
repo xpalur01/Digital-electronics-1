@@ -80,10 +80,10 @@ begin
 									yv := a + 1;
 						when "0100" => 						-- a -1
 									yv := a - 1;
-						when "0101" => 						-- b +1
-									yv := b + 1;
-						when "0110" => 						-- b -1
-									yv := b - 1;
+						when "0101" => 						-- Rotate right
+									yv := std_logic_vector(unsigned(b) ror 1);
+						when "0110" => 						-- Rotate left
+									yv := std_logic_vector(unsigned(b) rol 1);
 						when "0111" => 						-- a = b ??? if true '1' will be on display, if false '0' on the display
 									if(a=b) then
 										 yv := "0001" ;
@@ -93,8 +93,13 @@ begin
 										
 						when "1000" => 						-- NOT a
 									yv := NOT a;					
-						when "1001" => 						-- NOT b  
-									yv := NOT b;							 
+						when "1001" => 						-- Logical shift left
+									yv := std_logic_vector(unsigned(b) sll 1);
+									
+									if (b(3) = '1') then			
+									carry_var := '1';
+									carry_out <= carry_var;	
+									end if;
 						when "1010" => 						-- a AND b
 									yv := a AND b;				
 						when "1011" => 						-- a OR b
@@ -105,11 +110,14 @@ begin
 									yv := a XNOR b;	
 						when "1110" => 						-- This operation in czech "Dvojkový doplnìk a", just from 4 will do -4
 									yv := NOT(a) + 1;
-						when "1111" => 						-- This operation in czech "Dvojkový doplnìk b", just from 4 will do -4
-									yv := NOT(b) + 1;	
+						when "1111" => 					   -- Switch MSB and LSB 	
+									yv(3) := b(0);
+									yv(2) := b(2);
+									yv(1) := b(1);
+									yv(0) := b(3);
 
-						when others =>  						-- PASS a
-									yv := a;
+						when others => 
+									null;
 					end case;
 			end if;
 --------------------------------------------------------------------------------------------	
