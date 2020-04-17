@@ -1,6 +1,6 @@
 # Projekt ALU
 ## Teoretický úvod
-ALU neboli aritmetická a logická jednotka "Arithmetic & Logic Unit". Bez jeho implementace se v dnešní době neobejde žádný mikroprocesor. Je to fundament moderních počítačů, takový matematický mozek. Vnitřní stavba je ze dvou "subbloků", jeden se stará o aritmetické operace a druhá se stará o operace logické.
+ALU neboli aritmetická a logická jednotka "Arithmetic & Logic Unit". Bez jeho implementace se v dnešní době neobejde žádný mikroprocesor. Je to fundament moderních počítačů, takový matematický mozek. Vnitřní stavba je ze dvou "sub-bloků", jeden se stará o aritmetické operace a druhý se stará o operace logické.
 
 Aritmetické operace jsou např.: sčítání, odčítání, +1 = increment, -1 = decrement, převod kladného na záporné, 'pass through', některé provedou i násobení a dělení, apod. 
 
@@ -11,12 +11,12 @@ Logické operace jsou např.: NOT, AND, OR, XOR, clear operation, apod.
 
 ###### Obrázek 1 Schéma Aritmetickologické jednotky (popis pod obrázkem)
 Tady můžeme na obrázku 1 vidět schématickou značku. Nahoře se nachází dva vstupy označené Operand 1 & 2. Jedná se o N bitové vstupy dvou čísel. Dále je na spodu jeden N bitový výstup. Po stranách je vstup OPCODE. Tento vstup je kritický, protože díky jeho hodnotě se volí jaká operace se provede s operandy na vstupech. V některých implementacích má M+1 bitů, kdy "+1" je MSB a rozhoduje, zda zbylé M bity svou hodnotou budou odpovídat "knihovně" s aritmetickými operacemi nebo logickými např. '0100' odpovída aritmetické operaci pro sčítání obou operand & '1100' odpovídá logické operaci XOR. To jakou operaci to provede záleží čistě na nastavení čipu popřípadě programu.
-Také vidíme jeden status výstup. Ten v různýc případech plní různé funkce. Může se v něm nacházet výstup carry_out, popřípadě signalizace na led při záporném výsledku, overflow flag nebo nulový výstup.
+Také vidíme jeden status výstup. Ten v různých případech plní různé funkce. Může se v něm nacházet výstup carry_out, popřípadě signalizace na led při záporném výsledku, overflow flag nebo nulový výstup.
 
 <img src="Images/csc1401-lecture03-computer-arithmetic-arithmetic-and-logic-unit-alu-5-638.jpg" alt="ALU_colored" height="300"/>
 
 ###### Obrázek 2 Schéma Aritmetickologické jednotky (popisek je pod obrázkem)
-Tady je vidět jiná obrazová intepretace, ale ve výsledku je to to samé. Vidíme vstup, výstup flagy neboli status výstup a control signal.
+Tady je vidět jiná obrazová intepretace, ale ve výsledku je to to samé. Vidíme vstup, výstup, flagy neboli status výstup a control signal.
 
 <img src="Images/ALU%2074181.png" alt="ALU-74181" height="300"/>
 
@@ -28,7 +28,7 @@ Příklad ALU 74181, blokové schéma je uvedeno na obrázku 3, vykonává se dv
 ###### Obrázek 4 IC Aritmetickologické jednotky 74181 (popisek je nad obrázkem)
 
 ### Teoretická příprava
-Důležitou součástí vypracování projektu je teoretické usmyslení "co to vlastně udělam, jak to udělám...atd.". 
+Důležitou součástí vypracování projektu je teoretické usmyslení "co to vlastně udělám, jak to udělám...atd.". 
 Proto by jsem si první měl odpovědět na několik otázek:
 
 * Kolik bitů budou mít operandy A & B?
@@ -88,7 +88,7 @@ Proto by jsem si první měl odpovědět na několik otázek:
 | 1101 |      A XNOR B      |
 | 1110 | Dvojkový doplněk A |
 | 1111 |**B'MSB <=> B'LSB** |
-
+*Pozn. platí pro obrázky v sekci Kód & Operace č. 13*
 Tučným písmem jsem zvýraznil upravené operace. Jedná se o rotaci vpravo, rotaci vlevo, logický posun vlevo a přehození nejvyššího a nejnižšího čtvrbytu
 
 ### Vstupy
@@ -139,17 +139,15 @@ Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces, 
 ###### Obrázek 12 Součet s implementovaným clockem
 <img src="Images/C11%2611.PNG" alt="ALU-11&11" />
 
-Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
+Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě, které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
 Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku nedošlo k rozdílnostem ve funkčnosti. 
 
-/Pozn. Tyto testy proběhly před úpravou některých operací, které jsem pozměnil. Tyto operac jsem popsal i v teoretické přípravě jakožto dvě resp. čtyři různé tabulky. 
+*Pozn. Tyto testy proběhly před úpravou některých operací, které jsem pozměnil. Tyto operace jsem popsal i v teoretické přípravě jakožto dvě resp. čtyři různé tabulky.*
 
 V upravené verzi jsem předělal 4 operace. Rotace vpravo, kdy se např. z číšla "1011" stane "1101" & vlevo, logický posun vlevo o 1 např. "1011" přejde na "10110" a tedy se zapne carry out a poslední operand, který nám přinesl novou operaci prohození MSB a LSB např. "1010" se přemění na "0011".
 
 ###### Obrázek 13 Zobrazené upravené operace s různými vstupy
 <img src="Images/ALU_upgradeed.PNG" alt="ALUupgraded_operations" />
-
-
 
 ###### Obrázek 14 Schéma ALU jednotky v ISE
 <img src="Images/scheamtic_alu.PNG" alt="ALUschematic" />
@@ -157,10 +155,10 @@ V upravené verzi jsem předělal 4 operace. Rotace vpravo, kdy se např. z čí
 ###### Obrázek 15 Vnitřní stavba ALU v ISE
 <img src="Images/scheamtic_alu2.PNG" alt="ALUscheamtic2" />
 
-Tato jednotka se poskládala z jednotlivých sub segmentů, které každé plní svou funkci. Tak jak by se dala ALU poskládat z jednotlivých entit, kdy každá by plnila svou funkci. Tak je to vyřešené i v hardwaru. V procesoru se muže objevit například sekce tranzistorů, která plní jen funkci FULL ADDERU nebo jednoduché OR/AND. 
+Tato jednotka se poskládala z jednotlivých sub segmentů, které každé plní svou funkci. Tak jak by se dala ALU poskládat z jednotlivých entit, kdy každá by plnila svou funkci. Tak je to vyřešené i v hardwaru. V procesoru se muže objevit například sekce tranzistorů, která plní jen funkci FULL ADDERU nebo jednoduché OR/AND atd.
 
 ## Top
-Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Barevně jsem si rozlišil nejdůležitější věci jako clk_i, srst_n_i, a, b. Pak mi došly barvy, ale zároveň se jednalo o jediné rozvětvené rozvedené signály. 
+Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Barevně jsem si rozlišil nejdůležitější věci jako clk_i, srst_n_i, a, b. Pak mi došly barvy, ale zároveň se jednalo o jediné rozvětvené rozvedené signály. Proto zvýraznění dalších nebylo potřeba.
 
 ###### Obrázek 16 Rozkreslení Topu
 <img src="Images/IMG_20200417_154123_1.jpg" alt="ALUrozkreslení"  />
@@ -169,7 +167,7 @@ Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Bar
 <img src="Images/top_alu1.PNG" alt="Top_ISE1"  />
 <img src="Images/top_alu2cut.PNG" alt="Top_ISE2"  />
 
-Jak můžeme vidět na obrázcích 17 a 18 celý obvod používá 12 přepínačů, jedno resetovací tlačítko, sinchronizační clock na vstupech. Na výstupech máme tři jedno bitové výstupy, které se na boardě připojí ke třem led, které budou signalizovat různé stavy. Na 4 ciferný segmentový display bude přiveden vstup a, b (zleva) pak bude jedna nevyužitá cifra, a nejvíce zprava se bude zobrazovat výstup z Alu jednotky y. Tím pádem budeme vědět jaké vstupní hodnoty jsme zadali a jaká je výstupní hodnota.
+Jak můžeme vidět na obrázcích 17 a 18 celý obvod používá 12 přepínačů, jedno resetovací tlačítko, synchronizační clock na vstupech. Na výstupech máme tři jedno bitové výstupy, které se na boardě připojí ke třem led, které budou signalizovat různé stavy. Na 4 ciferný segmentový display bude přiveden vstup a, b (zleva) pak bude jedna nevyužitá cifra, a nejvíce zprava se bude zobrazovat výstup z Alu jednotky y. Tím pádem budeme vědět jaké vstupní hodnoty jsme zadali a jaká je výstupní hodnota.
 Teoreticky by se dal výstupní signál s_disp nasměrovat i na čtveřici led na rozšiřujícím "shieldu" pro lepší názornost logických operací...
 
 ## Zdroje
