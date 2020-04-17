@@ -85,7 +85,7 @@ Proto by jsem si první měl odpovědět na několik otázek:
 |__y__|výsledek|4-bit|
 
 ## Kód & Testbench
-Kód jsem prvě dostal do funkčního stavu bez vstupního clocku. S testbenchem, který jsem provedl jsem byl spokojený. Jak můžeme vidět na obrázku, vše vypadá v pořádku, zobrazuje se dobře. 
+Kód jsem prvně dostal do funkčního stavu bez vstupního clocku. S testbenchem, který jsem provedl jsem byl spokojený. Jak můžeme vidět na obrázku 5 až 8, vše vypadá v pořádku, zobrazuje se dobře. 
 
 ###### Obrázek 5 Součet bez clocku
 <img src="Images/3%261.PNG" alt="ALU-3&1" />
@@ -99,9 +99,7 @@ Kód jsem prvě dostal do funkčního stavu bez vstupního clocku. S testbenchem
 ###### Obrázek 8 Součet bez clocku
 <img src="Images/11%2611.PNG" alt="ALU-11&11" />
 
-
-
-Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces aby záležel na clocku. To se mi také povedlo.
+Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces, aby záležel na clocku. To se mi také povedlo. Vše je vidět na obrázku 9 až 12.
 
 ###### Obrázek 9 Součet s implementovaným clockem
 <img src="Images/C3%261.PNG" alt="ALU-3&1" />
@@ -119,12 +117,11 @@ Všechny operace jsem vyzkoušel pro více různých případů vstupních hodno
 
 Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku nedošlo k rozdílnostem ve funkčnosti. 
 
+###### Obrázek 13 Schéma ALU jednotky v ISE
 <img src="Images/scheamtic_alu.PNG" alt="ALUschematic" />
 
-###### Obrázek 13 Schéma ALU jednotky v ISE
-<img src="Images/scheamtic_alu2.PNG" alt="ALUscheamtic2" />
-
 ###### Obrázek 14 Vnitřní stavba ALU v ISE
+<img src="Images/scheamtic_alu2.PNG" alt="ALUscheamtic2" />
 
 Tato jednotka se poskládala z jednotlivých sub segmentů, které každé plní svou funkci. Tak jak by se dala ALU poskládat z jednotlivých entit, kdy každá by plnila svou funkci. Tak je to vyřešené i v hardwaru. V procesoru se muže objevit například sekce tranzistorů, která plní jen funkci FULL ADDERU nebo jednoduché OR/AND. 
 
