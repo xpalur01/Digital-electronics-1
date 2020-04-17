@@ -41,7 +41,7 @@ Proto by jsem si první měl odpovědět na několik otázek:
     -mohu zobrazit hodnotu například na led na CPLD boardě. Carry out flag, zero flag, overflow flag nebo negative flag se dají aplikovat. Já se rozhodnul pro aplikování zero flag, carry out flag a negative flag.
 
 ### Operace
-
+#### Před úpravou operací "Verze 1"
 | Kód | Operace |     
 |:---:|:-------:|
 | 0000 |  A + B  |
@@ -63,7 +63,32 @@ Proto by jsem si první měl odpovědět na několik otázek:
 | 1101 |      A XNOR B      |
 | 1110 | Dvojkový doplněk A |
 | 1111 | Dvojkový doplněk B |
+/Pozn. platí pro obrázky v sekci Kód & Operace č. 5 až 12
 
+#### Po úpravě operací "Verze 2"
+| Kód | Operace |     
+|:---:|:-------:|
+| 0000 |  A + B  |
+| 0001 |  A - B  |
+| 0010 |  B - A  |
+| 0011 |  A + 1  |
+| 0100 |  A - 1  |
+| 0101 |  **B >> 1** |
+| 0110 |  **B << 1** |
+| 0111 | A = B ? |
+
+|  Kód |       Operace      |
+|:----:|:------------------:|
+| 1000 |        NOT A       |
+| 1001 |**B Logical Shift Left**|
+| 1010 |       A AND B      |
+| 1011 |       A OR B       |
+| 1100 |       A XOR B      |
+| 1101 |      A XNOR B      |
+| 1110 | Dvojkový doplněk A |
+| 1111 |      **NOP**       |
+
+Tučným písmem jsem zvýraznil upravené operace. Jedná se o rotaci vpravo, rotaci vlevo, logický posun vlevo a NOP neboli no operation
 
 ### Vstupy
 
@@ -114,8 +139,8 @@ Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces, 
 <img src="Images/C11%2611.PNG" alt="ALU-11&11" />
 
 Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
-
 Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku nedošlo k rozdílnostem ve funkčnosti. 
+/Pozn. Tyto testy proběhly před úpravou některých operací, které jsem pozměnil. Tyto operac jsem popsal i v teoretické přípravě jakožto dvě resp. čtyři různé tabulky. 
 
 ###### Obrázek 13 Schéma ALU jednotky v ISE
 <img src="Images/scheamtic_alu.PNG" alt="ALUschematic" />
