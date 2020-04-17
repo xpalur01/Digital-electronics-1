@@ -7,25 +7,25 @@ Aritmetické operace jsou např.: sčítání, odčítání, +1 = increment, -1 
 Logické operace jsou např.: NOT, AND, OR, XOR, clear operation, apod.
 
 ## Obrázky
-
 <img src="Images/ALU.png" alt="ALU-sign" height="300"/>
-#### Obrázek 1 Schéma Aritmetickologické jednotky (popis pod obrázkem)
 
+###### Obrázek 1 Schéma Aritmetickologické jednotky (popis pod obrázkem)
 Tady můžeme na obrázku 1 vidět schématickou značku. Nahoře se nachází dva vstupy označené Operand 1 & 2. Jedná se o N bitové vstupy dvou čísel. Dále je na spodu jeden N bitový výstup. Po stranách je vstup OPCODE. Tento vstup je kritický, protože díky jeho hodnotě se volí jaká operace se provede s operandy na vstupech. V některých implementacích má M+1 bitů, kdy "+1" je MSB a rozhoduje, zda zbylé M bity svou hodnotou budou odpovídat "knihovně" s aritmetickými operacemi nebo logickými např. '0100' odpovída aritmetické operaci pro sčítání obou operand & '1100' odpovídá logické operaci XOR. To jakou operaci to provede záleží čistě na nastavení čipu popřípadě programu.
 Také vidíme jeden status výstup. Ten v různýc případech plní různé funkce. Může se v něm nacházet výstup carry_out, popřípadě signalizace na led při záporném výsledku, overflow flag nebo nulový výstup.
 
 <img src="Images/csc1401-lecture03-computer-arithmetic-arithmetic-and-logic-unit-alu-5-638.jpg" alt="ALU_colored" height="300"/>
-#### Obrázek 2 Schéma Aritmetickologické jednotky (popisek je pod obrázkem)
 
+###### Obrázek 2 Schéma Aritmetickologické jednotky (popisek je pod obrázkem)
 Tady je vidět jiná obrazová intepretace, ale ve výsledku je to to samé. Vidíme vstup, výstup flagy neboli status výstup a control signal.
 
 <img src="Images/ALU%2074181.png" alt="ALU-74181" height="300"/>
-#### Obrázek 3 IC Aritmetickologické jednotky 74181 (popisek je pod obrázkem)
 
+###### Obrázek 3 IC Aritmetickologické jednotky 74181 (popisek je pod obrázkem)
 Příklad ALU 74181, blokové schéma je uvedeno na obrázku 3, vykonává se dvěma čtyřbitovými operandy A a B 16 aritmetických operací a 16 logických operací ve dvojkové soustavě. Obvod provádí např. aritmetické operace: sčítání, odčítání, přičtení jedničky, dvojkový doplněk, posuv o 1 místo vlevo, porovnání obou čísel a další. Dále obvod vykonává logické operace: logický součet, logický součin, dále funkce NAND, NOR, NOT, ekvivalenci a nonekvivalencí a další. Výběr operací je prováděn pomocí řídicích vstupů S0 až S3. Bit M určuje typ prováděné operace. Pro M = 1 provádí obvod logické operace a pro M = 0 provádí aritmetické operace. Kromě toho je druh operace závislý na hodnotě přenosu z nižšího řádu Cn. Je-li třeba zpracovávat data s více než 4 bity, mohou se obvody ALU 74181 řadit do série. Aby se přitom nezpomaloval výpočet v důsledku zpoždění šíření přenosu aritmetickými jednotkami, používá se speciální integrovaný obvod pro zrychlení šíření přenosu s označením 74182. Zapojení čtyř ALU jednotek pro délku operandů 16 bitů se zapojením obvodu pro zrychlení přenosu je znázorněno na dalším obrázku 4. Označení CLA značí "Carry Look-Ahead".
 
 <img src="Images/ALU%2074181_2.png" alt="ALU-74181" height="300"/>
-#### Obrázek 4 IC Aritmetickologické jednotky 74181 (popisek je nad obrázkem)
+
+###### Obrázek 4 IC Aritmetickologické jednotky 74181 (popisek je nad obrázkem)
 
 ### Teoretická příprava
 Důležitou součástí vypracování projektu je teoretické usmyslení "co to vlastně udělam, jak to udělám...atd.". 
@@ -88,34 +88,44 @@ Proto by jsem si první měl odpovědět na několik otázek:
 Kód jsem prvě dostal do funkčního stavu bez vstupního clocku. S testbenchem, který jsem provedl jsem byl spokojený. Jak můžeme vidět na obrázku, vše vypadá v pořádku, zobrazuje se dobře. 
 
 <img src="Images/3%261.PNG" alt="ALU-3&1" />
-#### Obrázek 5 Součet bez clocku
+
+###### Obrázek 5 Součet bez clocku
 <img src="Images/3%2611.PNG" alt="ALU-3&11" />
-#### Obrázek 6 Součet bez clocku
+
+###### Obrázek 6 Součet bez clocku
 <img src="Images/15%264.PNG" alt="ALU-15&4" />
-#### Obrázek 7 Součet bez clocku
+
+###### Obrázek 7 Součet bez clocku
 <img src="Images/11%2611.PNG" alt="ALU-11&11" />
-#### Obrázek 8 Součet bez clocku
+
+###### Obrázek 8 Součet bez clocku
 
 Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces aby záležel na clocku. To se mi také povedlo.
 
 
 <img src="Images/C3%261.PNG" alt="ALU-3&1" />
-#### Obrázek 9 Součet s implementovaným clockem
+
+###### Obrázek 9 Součet s implementovaným clockem
 <img src="Images/C3%2611.PNG" alt="ALU-3&11" />
-#### Obrázek 10 Součet s implementovaným clockem
+
+###### Obrázek 10 Součet s implementovaným clockem
 <img src="Images/C15%264.PNG" alt="ALU-15&4" />
-#### Obrázek 11 Součet s implementovaným clockem
+
+###### Obrázek 11 Součet s implementovaným clockem
 <img src="Images/C11%2611.PNG" alt="ALU-11&11" />
-#### Obrázek 12 Součet s implementovaným clockem
+
+###### Obrázek 12 Součet s implementovaným clockem
 
 Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
 
 Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku nedošlo k rozdílnostem ve funkčnosti. 
 
 <img src="Images/scheamtic_alu.PNG" alt="ALUschematic" />
-#### Obrázek 13 Schéma ALU jednotky v ISE
+
+###### Obrázek 13 Schéma ALU jednotky v ISE
 <img src="Images/scheamtic_alu2.PNG" alt="ALUscheamtic2" />
-#### Obrázek 14 Vnitřní stavba ALU v ISE
+
+###### Obrázek 14 Vnitřní stavba ALU v ISE
 
 Tato jednotka se poskládala z jednotlivých sub segmentů, které každé plní svou funkci. Tak jak by se dala ALU poskládat z jednotlivých entit, kdy každá by plnila svou funkci. Tak je to vyřešené i v hardwaru. V procesoru se muže objevit například sekce tranzistorů, která plní jen funkci FULL ADDERU nebo jednoduché OR/AND. 
 
