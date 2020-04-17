@@ -163,4 +163,4 @@ Tato jednotka se poskládala z jednotlivých sub segmentů, které každé plní
 Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Barevně jsem si rozlišil nejdůležitější věci jako clk_i, srst_n_i, a, b. Pak mi došly barvy, ale zároveň se jednalo o jediné rozvětvené rozvedené signály. 
 
 ###### Obrázek 16 Vnitřní stavba ALU v ISE
-<img src="Images/IMG_20200417_154123_1.jpg" alt="ALUrozkreslení" height="400" />
+<img src="Images/IMG_20200417_154123_1.jpg" alt="ALUrozkreslení"  />
