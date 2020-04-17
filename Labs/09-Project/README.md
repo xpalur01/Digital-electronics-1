@@ -9,7 +9,7 @@ Logické operace jsou např.: NOT, AND, OR, XOR, clear operation, apod.
 ## Obrázky
 
 <img src="Images/ALU.png" alt="ALU-sign" height="300"/>
-#### Obrázek 1 Schéma Aritmetickologické jednotky (popis pod obrázkem)
+##### Obrázek 1 Schéma Aritmetickologické jednotky (popis pod obrázkem)
 
 Tady můžeme na obrázku 1 vidět schématickou značku. Nahoře se nachází dva vstupy označené Operand 1 & 2. Jedná se o N bitové vstupy dvou čísel. Dále je na spodu jeden N bitový výstup. Po stranách je vstup OPCODE. Tento vstup je kritický, protože díky jeho hodnotě se volí jaká operace se provede s operandy na vstupech. V některých implementacích má M+1 bitů, kdy "+1" je MSB a rozhoduje, zda zbylé M bity svou hodnotou budou odpovídat "knihovně" s aritmetickými operacemi nebo logickými např. '0100' odpovída aritmetické operaci pro sčítání obou operand & '1100' odpovídá logické operaci XOR. To jakou operaci to provede záleží čistě na nastavení čipu popřípadě programu.
 Také vidíme jeden status výstup. Ten v různýc případech plní různé funkce. Může se v něm nacházet výstup carry_out, popřípadě signalizace na led při záporném výsledku, overflow flag nebo nulový výstup.
