@@ -141,7 +141,10 @@ Proto jsem přešel na další upgrade. Zaimplementoval jsem tedy celý proces, 
 
 Všechny operace jsem vyzkoušel pro více různých případů vstupních hodnot. Jakožto vstupní čísla jsem použil dvě různé, které jsou menší při součtu než 15 tj. "plný" výstup nenastane, dále také dvě které jsou při součtu větší než "1111" a proto donutím carry out zapnout, v neposlední řadě jsem použil pro test dvě stejné čísla. Vše je vidět na obrázcích. 
 Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku nedošlo k rozdílnostem ve funkčnosti. 
+
 /Pozn. Tyto testy proběhly před úpravou některých operací, které jsem pozměnil. Tyto operac jsem popsal i v teoretické přípravě jakožto dvě resp. čtyři různé tabulky. 
+
+V upravené verzi jsem předělal 4 operace. Rotace vpravo, kdy se např. z číšla "1011" stane "1101" & vlevo, logický posun vlevo o 1 např. "1011" přejde na "10110" a tedy se zapne carry out a poslední operand, který nám přinesl novou operaci prohození MSB a LSB např. "1010" se přemění na "0011".
 
 ###### Obrázek 13 Schéma ALU jednotky v ISE
 <img src="Images/scheamtic_alu.PNG" alt="ALUschematic" />
