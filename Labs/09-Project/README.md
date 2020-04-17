@@ -81,7 +81,7 @@ Proto by jsem si první měl odpovědět na několik otázek:
 |  Kód |       Operace      |
 |:----:|:------------------:|
 | 1000 |        NOT A       |
-| 1001 |**B Logical Shift Left**|
+| 1001 |**B Logický Posun Vlevo**|
 | 1010 |       A AND B      |
 | 1011 |       A OR B       |
 | 1100 |       A XOR B      |
