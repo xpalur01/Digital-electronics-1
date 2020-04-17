@@ -166,5 +166,5 @@ Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Bar
 <img src="Images/IMG_20200417_154123_1.jpg" alt="ALUrozkreslení"  />
 
 ###### Obrázek 17 Top v ISE
-<img src="Images/top_alu1.PNG.jpg" alt="Top_ISE1"  />
+<img src="Images/top_alu1.PNG" alt="Top_ISE1"  />
 <img src="Images/top_alu2cut.PNG" alt="Top_ISE2"  />
