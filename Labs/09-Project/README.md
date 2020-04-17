@@ -146,10 +146,15 @@ Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku
 
 V upravené verzi jsem předělal 4 operace. Rotace vpravo, kdy se např. z číšla "1011" stane "1101" & vlevo, logický posun vlevo o 1 např. "1011" přejde na "10110" a tedy se zapne carry out a poslední operand, který nám přinesl novou operaci prohození MSB a LSB např. "1010" se přemění na "0011".
 
-###### Obrázek 13 Schéma ALU jednotky v ISE
+###### Obrázek 13 Zobrazené upravené operace s různými vstupy
+<img src="Images/ALU_upgradeed.PNG" alt="ALUupgraded_operations" />
+
+
+
+###### Obrázek 14 Schéma ALU jednotky v ISE
 <img src="Images/scheamtic_alu.PNG" alt="ALUschematic" />
 
-###### Obrázek 14 Vnitřní stavba ALU v ISE
+###### Obrázek 15 Vnitřní stavba ALU v ISE
 <img src="Images/scheamtic_alu2.PNG" alt="ALUscheamtic2" />
 
 Tato jednotka se poskládala z jednotlivých sub segmentů, které každé plní svou funkci. Tak jak by se dala ALU poskládat z jednotlivých entit, kdy každá by plnila svou funkci. Tak je to vyřešené i v hardwaru. V procesoru se muže objevit například sekce tranzistorů, která plní jen funkci FULL ADDERU nebo jednoduché OR/AND. 
