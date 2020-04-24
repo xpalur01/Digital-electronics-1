@@ -36,7 +36,7 @@ Proto by jsem si první měl odpovědět na několik otázek:
 * Kolik bitů bude mít výstup?
     -nejčastěji se odvíjí od velikosti vstupních bitů. Teoreticky by šel navýšit klidně i o +1 za předpokladu že chceme mít carry out součástí čísla výstupu.
 * Kolik bitů bude mít kontrolní signál?
-    -odvíjí se od toho, kolik operací chceme provádět pro 2 bity máme možnost aplikovat 4 různé operace, pro 3 bity 8, pro 4 bity 16 operací. Já jsem se rozhodnul pro 4 bitový kontrolní vstup, jelikož 32 operací se mi zdá už hodně a nejspíše bych všechny možnosti nezaplnil. 
+    -odvíjí se od toho, kolik operací chceme provádět pro 2 bity máme možnost aplikovat 4 různé operace, pro 3 bity 8, pro 4 bity 16 operací. Já jsem se rozhodnul pro 4 bitový kontrolní vstup, jelikož bych rád ukázal na 16 možných operací mého výběru.
 * Jaké dodatečné výstupy budu chtít?
     -mohu zobrazit hodnotu například na led na CPLD boardě. Carry out flag, zero flag, overflow flag nebo negative flag se dají aplikovat. Já se rozhodnul pro aplikování zero flag, carry out flag a negative flag.
 
