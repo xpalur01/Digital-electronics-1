@@ -88,6 +88,7 @@ Proto by jsem si první měl odpovědět na několik otázek:
 | 1101 |      A XNOR B      |
 | 1110 | Dvojkový doplněk A |
 | 1111 |**B'MSB <=> B'LSB** |
+
 *Pozn. platí pro obrázky v sekci Kód & Operace č. 13*
 Tučným písmem jsem zvýraznil upravené operace. Jedná se o rotaci vpravo, rotaci vlevo, logický posun vlevo a přehození nejvyššího a nejnižšího čtvrbytu
 
@@ -144,7 +145,7 @@ Jak je viditelné z testbenche, oba se shodují a proto při implementaci clocku
 
 *Pozn. Tyto testy proběhly před úpravou některých operací, které jsem pozměnil. Tyto operace jsem popsal i v teoretické přípravě jakožto dvě resp. čtyři různé tabulky.*
 
-V upravené verzi jsem předělal 4 operace. Rotace vpravo, kdy se např. z číšla "1011" stane "1101" & vlevo, logický posun vlevo o 1 např. "1011" přejde na "10110" a tedy se zapne carry out a poslední operand, který nám přinesl novou operaci prohození MSB a LSB např. "1010" se přemění na "0011".
+V upravené verzi 2, jsem předělal 4 operace. Rotace vpravo, kdy se např. z číšla "1011" stane "1101" & vlevo, logický posun vlevo o 1 např. "1011" přejde na "10110" a tedy se zapne carry out a poslední operand, který nám přinesl novou operaci prohození MSB a LSB např. "1010" se přemění na "0011". K této verzi mě vedlo to, že jsem si uvědomil, že nekteré operace jako inkrementace o 1 tj. "A+1" stačí udělat jen pro jedno vstupní číslo. Proto jsem přemazal "B+1 & B-1" za jiné operace. Díky tomu jsem ve verzi 2 mohl ukázat a předvést další operace jako je rotace, logický posun a prohození MSB a LSB. Jelikož pokud by někdo chtěl můj kód použít pro další použití jako součást většího celku mohl by operovat s vícero příklady.
 
 ###### Obrázek 13 Zobrazené upravené operace s různými vstupy
 <img src="Images/ALU_upgradeed.PNG" alt="ALUupgraded_operations" />
