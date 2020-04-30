@@ -1,0 +1,5 @@
+vhdl work "C:\Users\HP\Desktop\09-Project\hex_to_7seg.vhd"
+vhdl work "C:\Users\HP\Desktop\09-Project\clock_enable.vhd"
+vhdl work "C:\Users\HP\Desktop\09-Project\driver_7seg.vhd"
+vhdl work "C:\Users\HP\Desktop\09-Project\ALU\alu.vhd"
+vhdl work "C:\Users\HP\Desktop\09-Project\ALU\top.vhd"

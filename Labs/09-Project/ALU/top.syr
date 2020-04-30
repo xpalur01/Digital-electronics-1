@@ -1,0 +1,388 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : CoolRunner2 CPLDs
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/HP/Desktop/09-Project/clock_enable.vhd" in Library work.
+Entity <clock_enable> compiled.
+Entity <clock_enable> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/HP/Desktop/09-Project/hex_to_7seg.vhd" in Library work.
+Entity <hex_to_7seg> compiled.
+Entity <hex_to_7seg> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/HP/Desktop/09-Project/driver_7seg.vhd" in Library work.
+Entity <driver_7seg> compiled.
+Entity <driver_7seg> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/HP/Desktop/09-Project/ALU/alu.vhd" in Library work.
+Entity <alu> compiled.
+Entity <alu> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/HP/Desktop/09-Project/ALU/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <driver_7seg> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <clock_enable> in library <work> (architecture <Behavioral>) with generics.
+	g_NPERIOD = "0000000000000110"
+
+Analyzing hierarchy for entity <clock_enable> in library <work> (architecture <Behavioral>) with generics.
+	g_NPERIOD = "0000000000101000"
+
+Analyzing hierarchy for entity <hex_to_7seg> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <Behavioral>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <driver_7seg> in library <work> (Architecture <Behavioral>).
+Entity <driver_7seg> analyzed. Unit <driver_7seg> generated.
+
+Analyzing generic Entity <clock_enable.2> in library <work> (Architecture <Behavioral>).
+	g_NPERIOD = "0000000000101000"
+Entity <clock_enable.2> analyzed. Unit <clock_enable.2> generated.
+
+Analyzing Entity <hex_to_7seg> in library <work> (Architecture <Behavioral>).
+Entity <hex_to_7seg> analyzed. Unit <hex_to_7seg> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <Behavioral>).
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing generic Entity <clock_enable.1> in library <work> (Architecture <Behavioral>).
+	g_NPERIOD = "0000000000000110"
+Entity <clock_enable.1> analyzed. Unit <clock_enable.1> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <alu>.
+    Related source file is "C:/Users/HP/Desktop/09-Project/ALU/alu.vhd".
+    Found 1-bit register for signal <carry_out>.
+    Found 4-bit register for signal <y>.
+    Found 1-bit register for signal <negf>.
+    Found 1-bit register for signal <zero>.
+    Found 5-bit adder for signal <temp$add0000> created at line 59.
+    Found 4-bit register for signal <yv>.
+    Found 4-bit comparator equal for signal <yv_0$cmp_eq0000> created at line 88.
+    Found 1-bit xor2 for signal <yv_0$xor0000> created at line 108.
+    Found 1-bit xor2 for signal <yv_1$xor0000> created at line 108.
+    Found 1-bit xor2 for signal <yv_2$xor0000> created at line 108.
+    Found 4-bit adder for signal <yv_3$add0000> created at line 80.
+    Found 4-bit adder for signal <yv_3$add0001> created at line 112.
+    Found 4-bit comparator greatequal for signal <yv_3$cmp_ge0000> created at line 64.
+    Found 4-bit comparator greatequal for signal <yv_3$cmp_ge0001> created at line 72.
+    Found 4-bit subtractor for signal <yv_3$sub0000> created at line 65.
+    Found 4-bit subtractor for signal <yv_3$sub0001> created at line 68.
+    Found 4-bit subtractor for signal <yv_3$sub0002> created at line 82.
+    Found 1-bit xor2 for signal <yv_3$xor0000> created at line 108.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred   4 Xor(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <clock_enable_1>.
+    Related source file is "C:/Users/HP/Desktop/09-Project/clock_enable.vhd".
+    Found 1-bit register for signal <clock_enable_o>.
+    Found 16-bit comparator less for signal <clock_enable_o$cmp_lt0000> created at line 39.
+    Found 16-bit up counter for signal <s_cnt>.
+    Found 16-bit comparator greatequal for signal <s_cnt$cmp_ge0000> created at line 39.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 Comparator(s).
+Unit <clock_enable_1> synthesized.
+
+
+Synthesizing Unit <clock_enable_2>.
+    Related source file is "C:/Users/HP/Desktop/09-Project/clock_enable.vhd".
+    Found 1-bit register for signal <clock_enable_o>.
+    Found 16-bit comparator less for signal <clock_enable_o$cmp_lt0000> created at line 39.
+    Found 16-bit up counter for signal <s_cnt>.
+    Found 16-bit comparator greatequal for signal <s_cnt$cmp_ge0000> created at line 39.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 Comparator(s).
+Unit <clock_enable_2> synthesized.
+
+
+Synthesizing Unit <hex_to_7seg>.
+    Related source file is "C:/Users/HP/Desktop/09-Project/hex_to_7seg.vhd".
+    Found 16x7-bit ROM for signal <seg_o>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <hex_to_7seg> synthesized.
+
+
+Synthesizing Unit <driver_7seg>.
+    Related source file is "C:/Users/HP/Desktop/09-Project/driver_7seg.vhd".
+    Found 1-of-4 decoder for signal <dig_o>.
+    Found 2-bit up counter for signal <s_cnt>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Decoder(s).
+Unit <driver_7seg> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/Users/HP/Desktop/09-Project/ALU/top.vhd".
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 6
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 3
+ 5-bit adder                                           : 1
+# Counters                                             : 3
+ 16-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+# Registers                                            : 10
+ 1-bit register                                        : 9
+ 4-bit register                                        : 1
+# Comparators                                          : 7
+ 16-bit comparator greatequal                          : 2
+ 16-bit comparator less                                : 2
+ 4-bit comparator equal                                : 1
+ 4-bit comparator greatequal                           : 2
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 6
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 3
+ 5-bit adder                                           : 1
+# Counters                                             : 3
+ 16-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <y_3> in Unit <alu> is equivalent to the following FF/Latch, which will be removed : <yv_3> 
+INFO:Xst:2261 - The FF/Latch <y_2> in Unit <alu> is equivalent to the following FF/Latch, which will be removed : <yv_2> 
+INFO:Xst:2261 - The FF/Latch <y_1> in Unit <alu> is equivalent to the following FF/Latch, which will be removed : <yv_1> 
+INFO:Xst:2261 - The FF/Latch <y_0> in Unit <alu> is equivalent to the following FF/Latch, which will be removed : <yv_0> 
+
+Optimizing unit <top> ...
+
+Optimizing unit <hex_to_7seg> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <clock_enable_1> ...
+  implementation constraint: INIT=r	 : s_cnt_15
+  implementation constraint: INIT=r	 : s_cnt_0
+  implementation constraint: INIT=r	 : s_cnt_1
+  implementation constraint: INIT=r	 : s_cnt_2
+  implementation constraint: INIT=r	 : s_cnt_3
+  implementation constraint: INIT=r	 : s_cnt_4
+  implementation constraint: INIT=r	 : s_cnt_5
+  implementation constraint: INIT=r	 : s_cnt_6
+  implementation constraint: INIT=r	 : s_cnt_7
+  implementation constraint: INIT=r	 : s_cnt_8
+  implementation constraint: INIT=r	 : s_cnt_9
+  implementation constraint: INIT=r	 : s_cnt_10
+  implementation constraint: INIT=r	 : s_cnt_11
+  implementation constraint: INIT=r	 : s_cnt_12
+  implementation constraint: INIT=r	 : s_cnt_13
+  implementation constraint: INIT=r	 : s_cnt_14
+
+Optimizing unit <clock_enable_2> ...
+  implementation constraint: INIT=r	 : s_cnt_15
+  implementation constraint: INIT=r	 : s_cnt_0
+  implementation constraint: INIT=r	 : s_cnt_1
+  implementation constraint: INIT=r	 : s_cnt_2
+  implementation constraint: INIT=r	 : s_cnt_3
+  implementation constraint: INIT=r	 : s_cnt_4
+  implementation constraint: INIT=r	 : s_cnt_5
+  implementation constraint: INIT=r	 : s_cnt_6
+  implementation constraint: INIT=r	 : s_cnt_7
+  implementation constraint: INIT=r	 : s_cnt_8
+  implementation constraint: INIT=r	 : s_cnt_9
+  implementation constraint: INIT=r	 : s_cnt_10
+  implementation constraint: INIT=r	 : s_cnt_11
+  implementation constraint: INIT=r	 : s_cnt_12
+  implementation constraint: INIT=r	 : s_cnt_13
+  implementation constraint: INIT=r	 : s_cnt_14
+
+Optimizing unit <driver_7seg> ...
+  implementation constraint: INIT=r	 : s_cnt_1
+  implementation constraint: INIT=r	 : s_cnt_0
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : CoolRunner2 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 29
+
+Cell Usage :
+# BELS                             : 807
+#      AND2                        : 273
+#      AND3                        : 29
+#      AND4                        : 7
+#      AND5                        : 1
+#      AND6                        : 1
+#      AND7                        : 1
+#      GND                         : 1
+#      INV                         : 265
+#      OR2                         : 157
+#      OR3                         : 5
+#      VCC                         : 1
+#      XOR2                        : 66
+# FlipFlops/Latches                : 43
+#      FD                          : 41
+#      FDCE                        : 2
+# IO Buffers                       : 29
+#      IBUF                        : 14
+#      OBUF                        : 15
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.18 secs
+ 
+--> 
+
+Total memory usage is 4485304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

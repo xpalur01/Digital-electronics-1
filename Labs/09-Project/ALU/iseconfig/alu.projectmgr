@@ -85,6 +85,8 @@
          <ClosedNode>/alu_tb02 - behavior C:|Users|HP|Downloads|Digital-electronics-1-master|Labs|07-stopwatch|alu|alu_tb02.vhd</ClosedNode>
          <ClosedNode>/alu_tb03 - behavior C:|Users|HP|Desktop|09-Project|ALU|alu_tb03.vhd</ClosedNode>
          <ClosedNode>/alu_tb03 - behavior C:|Users|HP|Downloads|Digital-electronics-1-master|Labs|07-stopwatch|alu|alu_tb03.vhd</ClosedNode>
+         <ClosedNode>/top - Behavioral C:|Users|HP|Desktop|09-Project|ALU|top.vhd</ClosedNode>
+         <ClosedNode>/top - Behavioral C:|Users|HP|Desktop|09-Project|ALU|top.vhd/DRIVER_7SEG - driver_7seg - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>alu_tb03 - behavior (C:/Users/HP/Desktop/09-Project/ALU/alu_tb03.vhd)</SelectedItem>

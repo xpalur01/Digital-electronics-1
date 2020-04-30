@@ -1,2 +1,10 @@
-AR alu behavioral C:/Users/HP/Desktop/09-Project/ALU/alu.vhd sub00/vhpl01 1587065395
-EN alu NULL C:/Users/HP/Desktop/09-Project/ALU/alu.vhd sub00/vhpl00 1587065394
+EN hex_to_7seg NULL C:/Users/HP/Desktop/09-Project/hex_to_7seg.vhd sub00/vhpl02 1588234605
+EN driver_7seg NULL C:/Users/HP/Desktop/09-Project/driver_7seg.vhd sub00/vhpl04 1588234607
+EN top NULL C:/Users/HP/Desktop/09-Project/ALU/top.vhd sub00/vhpl08 1588234611
+AR driver_7seg behavioral C:/Users/HP/Desktop/09-Project/driver_7seg.vhd sub00/vhpl05 1588234608
+AR clock_enable behavioral C:/Users/HP/Desktop/09-Project/clock_enable.vhd sub00/vhpl01 1588234604
+AR hex_to_7seg behavioral C:/Users/HP/Desktop/09-Project/hex_to_7seg.vhd sub00/vhpl03 1588234606
+AR alu behavioral C:/Users/HP/Desktop/09-Project/ALU/alu.vhd sub00/vhpl07 1588234610
+EN clock_enable NULL C:/Users/HP/Desktop/09-Project/clock_enable.vhd sub00/vhpl00 1588234603
+AR top behavioral C:/Users/HP/Desktop/09-Project/ALU/top.vhd sub00/vhpl09 1588234612
+EN alu NULL C:/Users/HP/Desktop/09-Project/ALU/alu.vhd sub00/vhpl06 1588234609

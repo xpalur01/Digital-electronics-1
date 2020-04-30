@@ -62,7 +62,7 @@ ARCHITECTURE behavior OF alu_tb03 IS
    signal b : std_logic_vector(3 downto 0) := (others => '0');
    signal alu_select : std_logic_vector(3 downto 0) := (others => '0');
    signal clk_i : std_logic := '0';
-   signal srst_n_i : std_logic := '1';
+   signal srst_n_i : std_logic := '0';
    signal en_i : std_logic := '1';
 
  	--Outputs
@@ -106,14 +106,14 @@ BEGIN
      
 		-- insert stimulus here
 		
-      --srst_n_i <= '1';
+      srst_n_i <= '1';
 		--en_i <= '1';
 		wait for 100 ns;
-		a <= "1011";
-		b <= "1011";
+		a <= "1111";
+		b <= "0011";
 		
---		alu_select <= "0000";
---		wait for clk_i_period*5;
+		alu_select <= "0000";
+		wait for clk_i_period*5;
 --		alu_select <= "0001";
 --		wait for clk_i_period*5;
 --		alu_select <= "0010";
@@ -122,17 +122,17 @@ BEGIN
 --		wait for clk_i_period*5;
 --		alu_select <= "0100";
 --		wait for clk_i_period*5;
-		alu_select <= "0101";
-		wait for clk_i_period*5;
-		alu_select <= "0110";
-		wait for clk_i_period*5;
+--		alu_select <= "0101";
+--		wait for clk_i_period*5;
+--		alu_select <= "0110";
+--		wait for clk_i_period*5;
 --		alu_select <= "0111";
 --		wait for clk_i_period*5;
 		--------------------------------
 --		alu_select <= "1000";
 --		wait for clk_i_period*5;
-		alu_select <= "1001";
-		wait for clk_i_period*5;
+--		alu_select <= "1001";
+--		wait for clk_i_period*5;
 --		alu_select <= "1010";
 --		wait for clk_i_period*5;
 --		alu_select <= "1011";
@@ -143,11 +143,11 @@ BEGIN
 --		wait for clk_i_period*5;
 --		alu_select <= "1110";
 --		wait for clk_i_period*5;
-		alu_select <= "1111";
-		wait for clk_i_period*5;	
+--		alu_select <= "1111";
+--		wait for clk_i_period*5;	
 
 	b <= "0011";
-		
+		srst_n_i <= '0';
 --		alu_select <= "0000";
 --		wait for clk_i_period*5;
 --		alu_select <= "0001";
@@ -182,7 +182,7 @@ BEGIN
 		alu_select <= "1111";
 		wait for clk_i_period*5;		
 		
-
+      srst_n_i <= '1';
 	b <= "0001";
 		
 --		alu_select <= "0000";
