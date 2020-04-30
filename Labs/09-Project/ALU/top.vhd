@@ -20,9 +20,9 @@ port (
     disp_seg_o       : out std_logic_vector(7-1 downto 0);
     disp_dig_o       : out std_logic_vector(4-1 downto 0);
 	 
-	 LD0              : out std_logic;           -- Carry = alu_carry_out
-    LD1              : out std_logic;           -- Negative flag = alu_negf
-    LD2              : out std_logic            -- Output equal "0" = alu_zero
+    LD0              : out std_logic;                           -- Carry = alu_carry_out
+    LD1              : out std_logic;                           -- Negative flag = alu_negf
+    LD2              : out std_logic                            -- Output equal "0" = alu_zero
 );
 end entity top;
 
@@ -34,9 +34,9 @@ architecture Behavioral of top is
     signal s_dataSEL          : std_logic_vector(4-1 downto 0);
     signal s_en               : std_logic;
     signal s_disp             : std_logic_vector(4-1 downto 0);
-	 signal s_zero             : std_logic;
-	 signal s_negf             : std_logic;
-	 signal s_carry_out        : std_logic;
+    signal s_zero             : std_logic;
+    signal s_negf             : std_logic;
+    signal s_carry_out        : std_logic;
 
 begin
 
@@ -102,8 +102,7 @@ begin
        clock_enable_o => s_en
        
     );
-	 
-	 LD0 <= s_carry_out;
+    LD0 <= s_carry_out;
     LD1 <= s_negf;
     LD2 <= s_zero;
          
