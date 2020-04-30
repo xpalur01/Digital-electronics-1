@@ -42,9 +42,9 @@ begin
              "0000000" when (hex_i = "1000") else   -- 8
              "0001100" when (hex_i = "1001") else   -- 9
 				 
-				 "0001000" when (hex_i = "1010") else   -- A
+	     "0001000" when (hex_i = "1010") else   -- A
              "1100000" when (hex_i = "1011") else   -- B
-				 "0110001" when (hex_i = "1100") else   -- C
+	     "0110001" when (hex_i = "1100") else   -- C
              "1000010" when (hex_i = "1101") else   -- D           
              "0110000" when (hex_i = "1110") else   -- E
              "0111000";                             -- F
