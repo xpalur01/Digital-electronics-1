@@ -13,7 +13,7 @@ generic (
     g_NPERIOD : std_logic_vector(16-1 downto 0) := x"0006"
 );
 port (--------------------------------------------- INPUTS
-			 clk_i          : in  std_logic;				-- Clock input
+			 clk_i          : in  std_logic;		        -- Clock input
 			 srst_n_i       : in  std_logic; 			-- Synchronous reset (active low)
 			 
 		--------------------------------------------- OUTPUTS
@@ -33,9 +33,9 @@ begin
 --------------------------------------------------------------------
     p_clk_enable : process (clk_i)
     begin
-        if rising_edge(clk_i) then 					 -- Rising clock edge
-            if srst_n_i = '0' then  				 -- Synchronous reset (active low)
-                s_cnt <= (others => '0');  	    -- Clear all bits
+        if rising_edge(clk_i) then 		 -- Rising clock edge
+            if srst_n_i = '0' then  		 -- Synchronous reset (active low)
+                s_cnt <= (others => '0');  	 -- Clear all bits
                 clock_enable_o <= '0';
             elsif s_cnt >= g_NPERIOD-1 then      -- Enable pulse
                 s_cnt <= (others => '0');
