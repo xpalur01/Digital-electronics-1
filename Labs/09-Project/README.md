@@ -165,7 +165,7 @@ Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Bar
 <img src="Images/IMG_20200417_154123_1.jpg" alt="ALUrozkreslení"  />
 
 ###### Obrázek 17 & 18 Top v ISE (horní a dolní díl)
-<img src="Images/top_alu1.PNG" alt="Top_ISE1"  />
+<img src="Images/top_Top.PNG" alt="Top_ISE1"  />
 <img src="Images/top_alu2cut.PNG" alt="Top_ISE2"  />
 
 Jak můžeme vidět na obrázcích 17 a 18 celý obvod používá 12 přepínačů, jedno resetovací tlačítko, synchronizační clock na vstupech. Na výstupech máme tři jedno bitové výstupy, které se na boardě připojí ke třem led, které budou signalizovat různé stavy. Na 4 ciferný segmentový display bude přiveden vstup a, b (zleva) pak bude jedna nevyužitá cifra, a nejvíce zprava se bude zobrazovat výstup z Alu jednotky y. Tím pádem budeme vědět jaké vstupní hodnoty jsme zadali a jaká je výstupní hodnota.
