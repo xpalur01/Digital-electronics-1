@@ -168,8 +168,11 @@ Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Bar
 <img src="Images/top_Top.PNG" alt="Top_ISE1"  />
 <img src="Images/top_alu2cut.PNG" alt="Top_ISE2"  />
 
+###### Obrázek 20 Top v ISE (vnější pohled)
+<img src="Images/top_alu.PNG" alt="Top_ISE1"  />
+
 Jak můžeme vidět na obrázcích 17 a 18 celý obvod používá 12 přepínačů, jedno resetovací tlačítko, synchronizační clock na vstupech. Na výstupech máme tři jedno bitové výstupy, které se na boardě připojí ke třem led, které budou signalizovat různé stavy. Na 4 ciferný segmentový display bude přiveden vstup a, b (zleva) pak bude jedna nevyužitá cifra, a nejvíce zprava se bude zobrazovat výstup z Alu jednotky y. Tím pádem budeme vědět jaké vstupní hodnoty jsme zadali a jaká je výstupní hodnota.
-Teoreticky by se dal výstupní signál s_disp nasměrovat i na čtveřici led na rozšiřujícím "shieldu" pro lepší názornost logických operací...
+Teoreticky by se dal výstupní signál s_disp nasměrovat i na čtveřici led na rozšiřujícím "shieldu" pro lepší názornost logických operací.
 
 ## Zdroje
 Prošel jsem si mnoho internetových zdrojů, hlavně ty, které popisují teorii funkčnosti Alu, protože jsem v první řadě potřeboval zjistit co a jak to funguje. Dále jsem nahlédl a různé zpracování kódu převážně v jazyce vhdl. Každý kód je něčím užitečný, díky tomu jsem si získal teoretický přehled, jak asi zpracovat toto téma a jak postupovat.
