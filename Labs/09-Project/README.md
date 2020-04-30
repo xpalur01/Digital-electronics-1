@@ -174,6 +174,9 @@ Jako první jsem si celé rozvržení topu načrtnul na papír. Obrázek 16. Bar
 Jak můžeme vidět na obrázcích 17 a 18 celý obvod používá 12 přepínačů, jedno resetovací tlačítko, synchronizační clock na vstupech. Na výstupech máme tři jedno bitové výstupy, které se na boardě připojí ke třem led, které budou signalizovat různé stavy. Na 4 ciferný segmentový display bude přiveden vstup a, b (zleva) pak bude jedna nevyužitá cifra, a nejvíce zprava se bude zobrazovat výstup z Alu jednotky y. Tím pádem budeme vědět jaké vstupní hodnoty jsme zadali a jaká je výstupní hodnota.
 Teoreticky by se dal výstupní signál s_disp nasměrovat i na čtveřici led na rozšiřujícím "shieldu" pro lepší názornost logických operací.
 
+###### Obrázek 21 Ukázka resetu 
+<img src="Images/alu_reset.PNG" alt="Top_Reset"  />
+
 ## Zdroje
 Prošel jsem si mnoho internetových zdrojů, hlavně ty, které popisují teorii funkčnosti Alu, protože jsem v první řadě potřeboval zjistit co a jak to funguje. Dále jsem nahlédl a různé zpracování kódu převážně v jazyce vhdl. Každý kód je něčím užitečný, díky tomu jsem si získal teoretický přehled, jak asi zpracovat toto téma a jak postupovat.
 * https://www.youtube.com/watch?v=1I5ZMmrOfnA
